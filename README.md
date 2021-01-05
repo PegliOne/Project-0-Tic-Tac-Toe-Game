@@ -1,10 +1,15 @@
 # Project-0-Tic-Tac-Toe-Game
 A tic-tac-toe game made for the first project of the GA Software Engineering Course 
 
+# Game Production Diary
+
+# 05/01/21 11:50am
+
+- Step One complete. Basic looking game with basic functionality achieved. Next step will be to style the page to make it look for attractive and more dramatically show the outcome (so far the outcome is only presented in the display-info paragraph). The checkWin function will need to be optimised (probably with loops), since it's currently very repetitive. I may also remove the "top", "middle" and "bottom" ids and use classes exclusively. 
 
 # Game Production Plan
 
-# Technologies I'll Be Using
+# Technologies and Websites I'll Be Using
 - HTML, CSS and JavaScript
 - jQuery
 - Codepen (the game will initially be hosted there, since it's easier and familiar)
@@ -12,7 +17,7 @@ A tic-tac-toe game made for the first project of the GA Software Engineering Cou
 
 # Step One
 - Create an HTML file that displays the title, game board (either a table or a set of divs) and some instructions
-- Create a CSS sheet that makes the page look decent (more attractive styles can be added later). Centre board using flexbox properties (not covered in the course, I know)
+- Create a CSS sheet that makes the page look decent (more attractive styles can be added later)
 - Import jQuery
 - Create a JavaScript file that programs basic game logic such as tracking who's turn it is, adding Xs and Os, checking for wins (I'll start by writing down and testing against every win state, then see if I can think of an easier way to test for wins) and changing display to match outcome
 - Commit initial version to GitHub and edit readme file
