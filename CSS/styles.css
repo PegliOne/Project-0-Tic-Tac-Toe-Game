@@ -1,0 +1,27 @@
+header {
+  width: 600px;
+  margin: 10px auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 3.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+td {
+  height: 180px;
+  width: 180px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 9rem;
+}

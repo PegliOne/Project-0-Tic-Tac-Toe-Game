@@ -1,16 +1,51 @@
 <!DOCTYPE>
 <html>
 
-<head>
+  <head>
+    <title>Tic Tac Toe Game </title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="JS/app.js"></script>
 
-<title>Tic Tac Toe Game </title>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <header>
+        <h1> Tic Tac Toe Game </h1>
 
-<h1> Tic Tac Toe Game </h1>
+        <p>Click on a square to add an X or an O. Your goal is to get three Xs or Os in a row.</p>
 
-</body>
+        <p id="display-info">Next Symbol: <span>X</span> </p>
+
+    </header>
+
+    <main>
+
+      <table>
+        <tr id="top">
+        <!-- The up-slope and down-slope classes select the cells along the two diagonals -->
+          <td class="left down-slope"></td>
+          <td class="center"></td>
+          <td class="right up-slope"></td>
+        </tr>
+        <tr id="middle">
+          <td class="left"></td>
+          <td class="center up-slope down-slope"></td>
+          <td class="right"></td>
+        </tr>
+        <tr id="bottom">
+          <td class="left up-slope"></td>
+          <td class="center"></td>
+          <td class="right down-slope"></td>
+        </tr>
+      </table>
+
+    </main>
+
+
+
+
+  </body>
 
 </html>
