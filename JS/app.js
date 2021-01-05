@@ -1,26 +1,31 @@
-// This sets the symbol which will be placed next
+// Global Variables
 let symbol = "X";
 let gameOver = false;
 
-// This code needs to be DRYer. I should find a way to do this with loops.
-const checkWin = function() {
-     const topRow = $('#top td').text();
-     const middleRow = $('#middle td').text();
-     const bottomRow = $('#bottom td').text();
-     const leftCol = $('.left').text();
-     const centerCol = $('.center').text();
-     const rightCol = $('.right').text();
-     const upSlope = $('.up-slope').text();
-     const downSlope = $('.down-slope').text();
-     if (topRow === "XXX" || middleRow === "XXX" || bottomRow === "XXX" || leftCol === "XXX" || centerCol === "XXX" || rightCol === "XXX" || upSlope === "XXX" || downSlope === "XXX") {
-       gameOver = true;
-       $('#display-info').text("X Wins!");
-     } else if (topRow === "OOO" || middleRow === "OOO" || bottomRow === "OOO" || leftCol === "OOO" || centerCol === "OOO" || rightCol === "OOO" || upSlope === "OOO" || downSlope === "OOO") {
-       gameOver = true;
-       $('#display-info').text("O Wins!");
-     }
+
+// This function ends the game. I can use it to add more "end game" effects later on
+const endGame = function() {
+  gameOver = true;
+  $('body').addClass("finish");
+  $('h1').addClass("finish");
+  $('#game-info').addClass("finish");
 }
 
+// This function checks if either player has won the game
+const checkWin = function() {
+      const winCombos = [$('.top').text(), $('.middle').text(), $('.bottom').text(), $('.left').text(), $('.center').text(), $('.right').text(), $('.up-slope').text(), $('.down-slope').text()];
+      for ( let i = 0; i < winCombos.length; i++) {
+        if ( winCombos[i] === "XXX" ) {
+          endGame();
+          $('#game-info').text(`Player ${ symbol } Wins!`).addClass("finish");
+        } else if ( winCombos[i] === "OOO" ) {
+          endGame();
+          $('#game-info').text(`Player ${ symbol } Wins!`).addClass("finish");
+        }
+    }
+}
+
+// This function checks if all the squares are filled, signalling the game is over
 const checkTie = function() {
   $('td').each(function() {
     gameOver = true;
@@ -30,25 +35,28 @@ const checkTie = function() {
     }
   })
   if (gameOver) {
-    $('#display-info').text("Tie!");
+    endGame();
+  // This line can be overriden by the checkWin function in the event that a player wins on the last turn
+    $('#game-info').text("Tie!").addClass("finish");
   }
 }
 
+// Alternatives between adding Xs and Os to the game board
 const addSymbol = function() {
-    console.log(gameOver);
     if ($(this).text() === "" && gameOver === false) {
-      $(this).text(symbol);
+      $(this).text(symbol).addClass("finish");
+      checkTie();
+      checkWin();
       if (symbol === "X") {
         symbol = "O";
-      } else {
+        } else {
         symbol = "X";
-      }
-    $('span').text(symbol);
-    checkTie();
-    checkWin();
+        }
+      $('span').text(symbol);
     }
 }
 
+// Adds functionality to every cell on the page
 $( document ).ready( function() {
   $('td').on('click', addSymbol);
 })

@@ -1,27 +1,86 @@
-header {
-  width: 600px;
-  margin: 10px auto;
+body {
+  background-color: #a8dadc;
+  color: #000042;
+  font-family: 'Open Sans', sans-serif;
+  transition: background-color 0.5s;
+}
+
+body.finish {
+  background-color: #e63946;
+}
+
+#container {
+  background-color: #f1faee;
+  width: 85%;
+  margin: 50px auto;
+  padding: 50px 5px;
+  border-radius: 20px;
 }
 
 h1 {
+  width: 80%;
   text-align: center;
-  margin: 30px 0;
-  font-size: 3.5rem;
+  letter-spacing: 5;
+  margin: 0 auto;
+  font-size: 6rem;
+  border-bottom: 15px solid #a8dadc;
+  transition: border-color 0.5s;
+}
+
+h1.finish {
+  border-bottom: 15px solid #e63946;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+section {
+  margin: 0 auto;
+}
+
+#instructions {
+  width: 40%;
+}
+
+h2 {
+  letter-spacing: 2;
+  margin: 0 0 80px 0;
+  font-size: 4rem;
+  line-height: 1;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+#game-info {
+  margin: 100px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 table {
-  margin: 50px auto;
   border-collapse: collapse;
 }
 
 td {
+  color: #a8dadc;
   height: 180px;
   width: 180px;
-  border: 2px solid black;
+  border: 5px solid #1d3557;
   text-align: center;
-  font-size: 9rem;
+  font-size: 7rem;
+  transition: color 0.5s;
+}
+
+td:hover {
+  background-color: #a8dadc;
+}
+
+td.finish, p.finish {
+  color: #e63946;
 }

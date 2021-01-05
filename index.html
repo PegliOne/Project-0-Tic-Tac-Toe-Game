@@ -4,6 +4,8 @@
   <head>
     <title>Tic Tac Toe Game </title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="JS/jquery.js"></script>
     <script type="text/javascript" src="JS/app.js"></script>
 
@@ -11,40 +13,50 @@
 
   <body>
 
-    <header>
-        <h1> Tic Tac Toe Game </h1>
+    <div id="container">
 
-        <p>Click on a square to add an X or an O. Your goal is to get three Xs or Os in a row.</p>
+      <header>
+          <h1> Tic Tac Toe Game </h1>
 
-        <p id="display-info">Next Symbol: <span>X</span> </p>
+      </header>
 
-    </header>
+      <main>
 
-    <main>
+        <section id="instructions">
 
-      <table>
-        <tr id="top">
-        <!-- The up-slope and down-slope classes select the cells along the two diagonals -->
-          <td class="left down-slope"></td>
-          <td class="center"></td>
-          <td class="right up-slope"></td>
-        </tr>
-        <tr id="middle">
-          <td class="left"></td>
-          <td class="center up-slope down-slope"></td>
-          <td class="right"></td>
-        </tr>
-        <tr id="bottom">
-          <td class="left up-slope"></td>
-          <td class="center"></td>
-          <td class="right down-slope"></td>
-        </tr>
-      </table>
+          <h2>Instructions</h2>
 
-    </main>
+          <p>Click on a square to add an X or an O. Your goal is to get three Xs or Os in a row.</p>
 
+          <p id="game-info">Next Symbol: <span>X</span> </p>
 
+        </section>
 
+        <section id="game">
+
+          <table>
+              <tr>
+              <!-- The up-slope and down-slope classes select the cells along the two diagonals -->
+                <td class="top left down-slope"></td>
+                <td class="top center"></td>
+                <td class="top right up-slope"></td>
+              </tr>
+              <tr>
+                <td class="middle left"></td>
+                <td class="middle center up-slope down-slope"></td>
+                <td class="middle right"></td>
+              </tr>
+              <tr>
+                <td class="bottom left up-slope"></td>
+                <td class="bottom center"></td>
+                <td class="bottom right down-slope"></td>
+              </tr>
+            </table>
+
+        </section>
+      </main>
+
+    </div>
 
   </body>
 
