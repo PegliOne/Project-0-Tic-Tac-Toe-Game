@@ -5,7 +5,7 @@ body {
   transition: background-color 0.5s;
 }
 
-body.finish {
+body.finish, button {
   background-color: #e63946;
 }
 
@@ -41,26 +41,92 @@ section {
   margin: 0 auto;
 }
 
-#instructions {
-  width: 40%;
+#game-controls {
+  width: 500px;
 }
 
 h2 {
   letter-spacing: 2;
-  margin: 0 0 80px 0;
-  font-size: 4rem;
+  margin: 0 0 10px 0;
+  font-size: 3rem;
   line-height: 1;
 }
 
-p {
+#instructions {
+  display:inline-block;
+}
+
+button {
+  color: #f1faee;
+  padding: 2%;
+  border-radius: 15px;
   font-size: 2rem;
+  transition: display 0.5s;
+}
+
+#restart {
+  display: none;
+  width: 150px;
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: #a60906;
+  cursor: pointer;
+}
+
+#restart.finish {
+  display: inline-block;
+}
+
+p {
+  font-size: 1.5rem;
   text-align: justify;
+  display: inline-block;
+}
+
+span {
+  margin-left: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+input, button {
+  border: none;
+  outline: none;
+}
+
+
+input {
+  background-color: inherit;
+  width: 100px;
+  color: inherit;
+  border-bottom: 2px solid #000042;
+  font-size: inherit;
+  text-align: center;
+  font-weight: 600;
+}
+
+input:disabled {
+  color: grey;
+  border-bottom: 2px solid grey;
+  background-color: inherit;
+  cursor: default;
 }
 
 #game-info {
-  margin: 100px 0;
-  font-size: 2.5rem;
+  margin: 40px 0 80px 0;
+  font-size: 2rem;
   font-weight: 700;
+  width: 100%;
+}
+
+#game-info span {
+  font-size: 2.2rem;
+}
+
+#player-two-wins {
+  margin-left: 20%;
 }
 
 table {
@@ -73,12 +139,18 @@ td {
   width: 180px;
   border: 5px solid #1d3557;
   text-align: center;
-  font-size: 7rem;
+  font-size: 2rem;
   transition: color 0.5s;
 }
 
-td:hover {
+td:hover, input:hover {
   background-color: #a8dadc;
+  cursor: pointer;
+}
+
+td.finish:hover, input.finish:hover {
+  background-color: #f1faee;
+  cursor: default;
 }
 
 td.finish, p.finish {

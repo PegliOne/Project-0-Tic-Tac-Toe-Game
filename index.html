@@ -22,13 +22,23 @@
 
       <main>
 
-        <section id="instructions">
+        <section id="game-controls">
 
-          <h2>Instructions</h2>
+          <h2 id="instructions">Instructions</h2>
 
-          <p>Click on a square to add an X or an O. Your goal is to get three Xs or Os in a row.</p>
+          <button type="button" id="restart">Restart</button>
 
-          <p id="game-info">Next Symbol: <span>X</span> </p>
+          <p>Choose your symbols, then click on the squares to play.</p>
+
+          <p>Player One: <input type="text" id="player-one-symbol" value="X"></input></p>
+          <p>Player Two: <input type="text" id="player-two-symbol" value="O"></input></p>
+
+          <p id="game-info">Current Player: <span>X</span></p>
+
+          <h2>Win Counter</h2>
+
+          <p id="player-one-wins">Player One: <span>0</span></p>
+          <p id="player-two-wins">Player Two: <span>0</span></p>
 
         </section>
 
