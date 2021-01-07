@@ -1,23 +1,29 @@
 # Project-0-Tic-Tac-Toe-Game
 A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
-Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/)
+Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and [here](https://pams-tic-tac-toe.firebaseapp.com/)
 
 ## Outstanding issues
 
 * Game-info text does not transition gradually
+* Game isn't ended my moves triggered by a networked computer
+* Win counter isn't accurate for networked play
 
-## Technologies To Be Used
+## Technologies Used
 * HTML, CSS and JavaScript
 * jQuery (used to shorten the code)
 * GitHub Pages (to host the site)
-* Firebase (for multipler functionality)
+* Firebase (for multiplayer networking and as a hosting platform)
 
 ## Sites Used For Styling
 * [Coolers](https://coolors.co/palettes/popular)
 * [Google fonts](https://fonts.google.com/specimen/Open+Sans?preview.text=XOXOXOX&preview.text_type=custom&sidebar.open=true&selection.family=Open+Sans:wght@400;700)
 
 ## Game Production Updates
+
+### 08/01/21 10:50am
+
+Step Three complete. Firebase installed and running. Game deployed on Firebase with online networking enabled, but with some glitches. The game only displays when it has ended (and enables a game restart) on the computer that makes the game ending move. This create issue with the win counter. No other functionality will be added. The next step is to attempt to resolve these issues and complete a final review of my code.
 
 ### 07/01/21 2:15pm
 
@@ -50,11 +56,15 @@ Step One complete. Basic looking game with basic functionality achieved. Next st
 * Host game on GitHub pages and add the link on GitHub
 * Commit updated version to GitHub and edit readme file
 
-### Step Three - optional stuff
-* Add bonus functionality to JavaScript files (keeping tracking of rounds, letting players choose tokens and select custom board sizes)
-* Add local storage and networked multipler (if I can figure that stuff out!)
-* Add an AI opponent (probably not going to happen honestly)
-* Commit updated version to GitHub and edit readme file
+### Step Three - features included
+* Add bonus functionality to JavaScript files (keeping tracking of rounds, letting players choose counters)
+* Add local storage and networked multipler
+* Commit updated version to GitHub, deploy on Firebase and edit readme file
+
+### Step Three - intended features not included
+* The option to use images as counters (current version only allows the use of text)
+* The option to select different board sizes (this seemed like it would require too many changes to the current code)
+* AI opponents (I honestly didn't think I'd be able to pull that off)
 
 ### Step Four
 * Re-read all code and look for opportunities for to remove redundancies and optimise

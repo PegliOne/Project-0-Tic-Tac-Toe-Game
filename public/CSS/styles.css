@@ -1,3 +1,7 @@
+/* I've ordered the selectors according to where the elements appear in the HTML document, to make it easier for me to find the elements I'm looking for */
+/* Styles for the finish class have been placed at the bottom, so they'll overide other styles */
+
+/* Body Styling */
 body {
   background-color: #a8dadc;
   color: #000042;
@@ -5,10 +9,7 @@ body {
   transition: background-color 0.5s;
 }
 
-body.finish, button {
-  background-color: #e63946;
-}
-
+/* Container Styling */
 #container {
   background-color: #f1faee;
   width: 85%;
@@ -17,6 +18,7 @@ body.finish, button {
   border-radius: 20px;
 }
 
+/* Header Styling */
 h1 {
   width: 80%;
   text-align: center;
@@ -31,19 +33,26 @@ h1.finish {
   border-bottom: 15px solid #e63946;
 }
 
+/* Main Styling */
 main {
   display: flex;
   justify-content: center;
   margin-top: 100px;
 }
 
+/* General Section Styling */
+
 section {
   margin: 0 auto;
 }
 
+/* Game Controls Styling */
+
 #game-controls {
   width: 500px;
 }
+
+/* Sub-Headings and Button Styling */
 
 h2 {
   letter-spacing: 2;
@@ -53,7 +62,9 @@ h2 {
   display:inline-block;
 }
 
+/* Button styles, note: some button styles are grouped with input styles further down */
 button {
+  background-color: #e63946;
   color: #f1faee;
   padding: 2%;
   border-radius: 15px;
@@ -73,9 +84,36 @@ button:hover {
   cursor: pointer;
 }
 
-button.finish {
-  display: inline-block;
+/* Input Styling*/
+
+input, button {
+  border: none;
+  outline: none;
 }
+
+input {
+  background-color: inherit;
+  width: 100px;
+  color: inherit;
+  border-bottom: 2px solid #000042;
+  font-size: inherit;
+  text-align: center;
+  font-weight: 600;
+}
+
+input:hover {
+  background-color: #a8dadc;
+  cursor: pointer;
+}
+
+input:disabled {
+  color: grey;
+  border-bottom: 2px solid grey;
+  background-color: inherit;
+  cursor: default;
+}
+
+/* Paragraph and Span Styling */
 
 p {
   font-size: 1.5rem;
@@ -83,6 +121,11 @@ p {
   display: inline-block;
 }
 
+span {
+  margin-left: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
 
 #game-info {
   margin: 40px 0 80px 0;
@@ -103,64 +146,46 @@ p {
   margin-left: 7%;
 }
 
-span {
-  margin-left: 10px;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-input, button {
-  border: none;
-  outline: none;
-}
-
-
-input {
-  background-color: inherit;
-  width: 100px;
-  color: inherit;
-  border-bottom: 2px solid #000042;
-  font-size: inherit;
-  text-align: center;
-  font-weight: 600;
-}
-
-input:disabled {
-  color: grey;
-  border-bottom: 2px solid grey;
-  background-color: inherit;
-  cursor: default;
-}
+/* Board Styling */
 
 table {
   border-collapse: collapse;
+  width: 540px;
+  height: 540px;
 }
 
 td {
   color: #f1faee;
-  height: 180px;
-  width: 180px;
+  height: 33%;
+  /* height: 25% */
+  width: 33%;
+  /* width: 25%; */
   border: 5px solid #1d3557;
   text-align: center;
   font-size: 2rem;
   transition: color 0.5s;
 }
 
-td:hover, input:hover {
+td:hover {
   color: #a8dadc;
   background-color: #a8dadc;
   cursor: pointer;
 }
 
-input:hover {
-  color: #000042;
+/* Finish class styles */
+body.finish {
+  background-color: #e63946;
+}
+
+button.finish {
+  display: inline-block;
+}
+
+td.finish, p.finish {
+  color: #e63946;
 }
 
 td.finish:hover, input.finish:hover {
   background-color: #f1faee;
   cursor: default;
-}
-
-td.finish, p.finish {
-  color: #e63946;
 }
