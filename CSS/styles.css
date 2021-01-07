@@ -50,9 +50,6 @@ h2 {
   margin: 0 0 10px 0;
   font-size: 3rem;
   line-height: 1;
-}
-
-#instructions {
   display:inline-block;
 }
 
@@ -62,12 +59,13 @@ button {
   border-radius: 15px;
   font-size: 2rem;
   transition: display 0.5s;
-}
-
-#restart {
   display: none;
   width: 150px;
   margin-left: 20px;
+}
+
+#restart {
+  margin-left: 30px;
 }
 
 button:hover {
@@ -75,7 +73,7 @@ button:hover {
   cursor: pointer;
 }
 
-#restart.finish {
+button.finish {
   display: inline-block;
 }
 
@@ -83,6 +81,26 @@ p {
   font-size: 1.5rem;
   text-align: justify;
   display: inline-block;
+}
+
+
+#game-info {
+  margin: 40px 0 80px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+#game-info span {
+  font-size: 2.2rem;
+}
+
+#player-one-wins {
+  width: 40%;
+}
+
+#player-two-wins {
+  margin-left: 7%;
 }
 
 span {
@@ -114,27 +132,12 @@ input:disabled {
   cursor: default;
 }
 
-#game-info {
-  margin: 40px 0 80px 0;
-  font-size: 2rem;
-  font-weight: 700;
-  width: 100%;
-}
-
-#game-info span {
-  font-size: 2.2rem;
-}
-
-#player-two-wins {
-  margin-left: 20%;
-}
-
 table {
   border-collapse: collapse;
 }
 
 td {
-  color: #a8dadc;
+  color: #f1faee;
   height: 180px;
   width: 180px;
   border: 5px solid #1d3557;
@@ -144,8 +147,13 @@ td {
 }
 
 td:hover, input:hover {
+  color: #a8dadc;
   background-color: #a8dadc;
   cursor: pointer;
+}
+
+input:hover {
+  color: #000042;
 }
 
 td.finish:hover, input.finish:hover {

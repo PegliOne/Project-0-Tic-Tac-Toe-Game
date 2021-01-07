@@ -19,6 +19,10 @@ Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/)
 
 ## Game Production Updates
 
+### 07/01/21 2:15pm
+
+Step Three in progress. Local Storage, win counter reset added and comments added to JavaScript. I'll look into networked play next. I should also re-organise and add comments to the CSS file. It's getting pretty messy.
+
 ### 06/01/21 6:00pm
 
 Step Three in progress. Win counters, restart button and symbol selection added. Some text removed (hopefully no one needs tic tac toe explained to them). Player objects created to enable new functionality. Next step will be to add local storage and enable networked play. The rest of the desired functionality (enabling players to choose images, multiple board sizes and AI opponents), seems challenging to include, so these functions will be left until later.
