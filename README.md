@@ -7,6 +7,8 @@ Play the game [here](https://pams-tic-tac-toe.firebaseapp.com/)
 
 * Game-info text does not transition gradually
 * Game can't distinguish different users, so the same computer can be used to play multiple moves. Please play honestly!
+* Both players need to hit restart once the game is won. One player's restart won't automatically apply to the other
+* DON'T LET EITHER PLAYER SYMBOL INPUT GO BLANK. It will crash the game.
 
 ## Technologies Used
 * HTML, CSS and JavaScript
