@@ -1,17 +1,18 @@
 # Project-0-Tic-Tac-Toe-Game
 A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
-Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and [here](https://pams-tic-tac-toe.web.app/)
+Play the game [here](https://pams-tic-tac-toe.firebaseapp.com/)
 
 ## Outstanding issues
 
 * Game-info text does not transition gradually
 * Game can't distinguish different users, so the same computer can be used to play multiple moves. Please play honestly!
+* Both players need to hit restart once the game is won. One player's restart won't automatically apply to the other
+* DON'T LET EITHER PLAYER SYMBOL INPUT GO BLANK. It will crash the game.
 
 ## Technologies Used
 * HTML, CSS and JavaScript
 * jQuery (used to shorten the code)
-* GitHub Pages (to host the site)
 * Firebase (for multiplayer networking and as a hosting platform)
 
 ## Sites Used For Styling
