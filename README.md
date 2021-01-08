@@ -1,7 +1,7 @@
 # Project-0-Tic-Tac-Toe-Game
 A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
-Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and [here](https://pams-tic-tac-toe.web.app/)
+Play the game [here](https://pams-tic-tac-toe.web.app/)
 
 ## Outstanding issues
 
@@ -11,7 +11,6 @@ Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and
 ## Technologies Used
 * HTML, CSS and JavaScript
 * jQuery (used to shorten the code)
-* GitHub Pages (to host the site)
 * Firebase (for multiplayer networking and as a hosting platform)
 
 ## Sites Used For Styling
