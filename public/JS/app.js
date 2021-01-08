@@ -1,4 +1,4 @@
-console.log("This is the newest version");
+console.log("This is the very newest version");
 
 //Player Objects
 const players = [
@@ -63,9 +63,9 @@ const resetCounter = function() {
 
 // Checks for ties and wins and stores changes to the game
 const checkOutcome = function() {
+  storeGame();
   checkTie();
   checkWin();
-  storeGame();
 }
 
 // Checks if either player has won the game and updates winCount and #game-info text
@@ -149,7 +149,7 @@ const addSymbol = function() {
 // Stores the state of the board and is used by the storeGame function to save the game
 const storeBoard = function() {
   let board = "";
-  if (gameOver === false) {
+//  if (gameOver === false) {
     $('td').each(function(index) {
       if ($(this).text() === players[0].symbol) {
         // Indicates Player One has placed their symbol in the square
@@ -162,7 +162,7 @@ const storeBoard = function() {
         board+=" ";
       }
     });
-  }
+//  }
   renderBoard(board);
   return board;
 }
@@ -241,14 +241,13 @@ const setUpFirebase = function() {
 
 // Sends data to the Firebase database
 const sendOnline = function() {
-  const board = storeBoard();
   firebase.database().ref().set({
     playerOneSymbol: players[0].symbol,
     playerTwoSymbol: players[1].symbol,
     currentTurn: currentSymbol,
     gameOver: gameOver,
     gameRunning: gameRunning,
-    boardState: board,
+    boardState: storeBoard(),
     playerOneWins: players[0].winCount,
     playerTwoWins: players[1].winCount,
   })
