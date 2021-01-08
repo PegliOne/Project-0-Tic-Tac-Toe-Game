@@ -1,13 +1,12 @@
 # Project-0-Tic-Tac-Toe-Game
 A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
-Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and [here](https://pams-tic-tac-toe.firebaseapp.com/)
+Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and [here](https://pams-tic-tac-toe.web.app/)
 
 ## Outstanding issues
 
 * Game-info text does not transition gradually
-* Game isn't ended my moves triggered by a networked computer
-* Win counter isn't accurate for networked play
+* Game can't distinguish different users, so the same computer can be used to play multiple moves. Please play honestly!
 
 ## Technologies Used
 * HTML, CSS and JavaScript
@@ -20,6 +19,10 @@ Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/) and
 * [Google fonts](https://fonts.google.com/specimen/Open+Sans?preview.text=XOXOXOX&preview.text_type=custom&sidebar.open=true&selection.family=Open+Sans:wght@400;700)
 
 ## Game Production Updates
+
+### 08/01/21 12:00pm
+
+Step Four complete. Major issues with multiplayer networking solved using a MutationObserver. Redundant code deleted. Comments added to improve clarity.
 
 ### 08/01/21 10:50am
 
@@ -67,6 +70,6 @@ Step One complete. Basic looking game with basic functionality achieved. Next st
 * AI opponents (I honestly didn't think I'd be able to pull that off)
 
 ### Step Four
-* Re-read all code and look for opportunities for to remove redundancies and optimise
+* Re-read all code and remove deleted code
 * Attempt to fix problems encountered in previous steps
 * Commit updated version to GitHub and edit readme file

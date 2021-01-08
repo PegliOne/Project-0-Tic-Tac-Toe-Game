@@ -1,4 +1,4 @@
-console.log("Hello there");
+console.log("This is the newest version");
 
 //Player Objects
 const players = [
@@ -36,7 +36,6 @@ const endGame = function() {
     $('body, h1, button, td, #game-info').addClass("finish");
     $('#player-one-wins span').text(players[0].winCount);
     $('#player-two-wins span').text(players[1].winCount);
-//    storeGame();
 }
 
 // Restarts the game, when the restart button is clicked
@@ -61,6 +60,13 @@ const resetCounter = function() {
 }
 
 // Functions for checking game outcome
+
+// Checks for ties and wins and stores changes to the game
+const checkOutcome = function() {
+  checkTie();
+  checkWin();
+  storeGame();
+}
 
 // Checks if either player has won the game and updates winCount and #game-info text
 const checkWin = function() {
@@ -133,10 +139,6 @@ const addSymbol = function() {
         currentSymbol = players[0].symbol;
       }
       $('#game-info span').text(currentSymbol);
-      storeBoard();
-      storeGame();
-      checkTie();
-      checkWin();
     }
 }
 
@@ -161,6 +163,7 @@ const storeBoard = function() {
       }
     });
   }
+  renderBoard(board);
   return board;
 }
 
@@ -169,10 +172,10 @@ const storeGame = function() {
       localStorage.setItem("playerOneSymbol" , players[0].symbol)
       localStorage.setItem("playerTwoSymbol" , players[1].symbol)
       localStorage.setItem("currentTurn", currentSymbol);
-      storeBoard();
       localStorage.setItem("boardState", storeBoard());
       localStorage.setItem("playerOneWins", players[0].winCount);
       localStorage.setItem("playerTwoWins", players[1].winCount);
+      storeBoard();
       sendOnline();
     }
 
@@ -255,12 +258,7 @@ const sendOnline = function() {
 const readFromOnline = function() {
   firebase.database().ref().on("value", (snapshot) => {
     const data = snapshot.val();
-    // This is heavily copied from the retrieveGame function. Maybe I'll find a way to combine them or use a render function to display the data
-    if (data.gameOver === true) {
-      endGame();
-    } else if (data.gameRunning === true) {
-      renderBoard(data.boardState);
-    }
+    // This is heavily copied from the retrieveGame function. Maybe I'll find a way to combine them or use a render function
     players[0].symbol = data.playerOneSymbol;
     $('#player-one-symbol').val(players[0].symbol);
     players[1].symbol = data.playerTwoSymbol;
@@ -271,6 +269,7 @@ const readFromOnline = function() {
     $('#player-one-wins span').text(players[0].winCount);
     players[1].winCount = data.playerTwoWins;
     $('#player-two-wins span').text(players[1].winCount);
+    renderBoard(data.boardState);
   })
 }
 
@@ -286,7 +285,13 @@ $( document ).ready( function() {
   readFromOnline();
   $('#player-one-symbol').on("keyup", setPlayerOneSymbol);
   $('#player-two-symbol').on("keyup", setPlayerTwoSymbol);
-  $('td').on("click", addSymbol);
+  const cells = $('td');
+  cells.on("click", addSymbol);
+  // Sets up observation of changes in the cells and triggers the checkOutcome function for all changes
+  for ( let i = 0; i < cells.length; i++) {
+    const cellObserver = new MutationObserver(checkOutcome);
+    cellObserver.observe(cells[i], {characterData: true, attributes: true})
+  }
   $('#restart').on("click", restartGame);
   $('#reset').on("click", resetCounter);
 })
