@@ -8,7 +8,6 @@ Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/publi
 * Game-info text does not transition gradually
 * Game can't distinguish different users, so the same computer can be used to play multiple moves. Please play honestly!
 * Both players need to hit restart once the game is won. One player's restart won't automatically apply to the other
-* DON'T LET EITHER PLAYER SYMBOL INPUT GO BLANK. It will crash the game.
 
 ## Technologies Used
 * HTML, CSS and JavaScript
@@ -20,6 +19,10 @@ Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/publi
 * [Google fonts](https://fonts.google.com/specimen/Open+Sans?preview.text=XOXOXOX&preview.text_type=custom&sidebar.open=true&selection.family=Open+Sans:wght@400;700)
 
 ## Game Production Updates
+
+### 24/03/21 11:20pm
+
+Bug fixed: The game no longer fails if one of the player symbol inputs is blank. Can't believe I didn't fix it sooner.
 
 ### 08/01/21 12:00pm
 
