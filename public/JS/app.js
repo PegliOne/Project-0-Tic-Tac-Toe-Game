@@ -109,7 +109,7 @@ const checkTie = function() {
 
  // Sets the player's counters. This could perhaps be achieved with a loop.
  const setPlayerOneSymbol = function() {
-   if (gameRunning === false) {
+   if (gameRunning === false && $(this).val() !== "") {
      players[0].symbol = $(this).val();
      currentSymbol = players[0].symbol;
      $('#game-info span').text(currentSymbol);
@@ -118,7 +118,7 @@ const checkTie = function() {
  }
 
  const setPlayerTwoSymbol = function() {
-   if (gameRunning === false) {
+   if (gameRunning === false && $(this).val() !== "") {
      players[1].symbol = $(this).val();
      storeGame();
    }
