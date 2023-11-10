@@ -1,8 +1,7 @@
 <!DOCTYPE>
 <html>
-
   <head>
-    <title>Tic Tac Toe Game </title>
+    <title>Tic-Tac-Toe Game </title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -11,44 +10,28 @@
 
     <script type="text/javascript" src="JS/jquery.js"></script>
     <script type="text/javascript" src="JS/app.js"></script>
-
   </head>
 
   <body>
-
     <div id="container">
-
       <header>
-          <h1> Tic Tac Toe Game </h1>
-
+          <h1>Tic-Tac-Toe Game</h1>
       </header>
-
       <main>
-
         <section id="game-controls">
-
           <h2 id="instructions">Instructions</h2>
-
           <button type="button" id="restart">Restart</button>
-
           <p>Choose your symbols, then click on the squares to play.</p>
-
           <p>Player One: <input type="text" id="player-one-symbol" value="X"></input></p>
           <p>Player Two: <input type="text" id="player-two-symbol" value="O"></input></p>
-
           <p id="game-info">Current Player: <span>X</span></p>
-
           <h2>Win Counter</h2>
-
           <button type="button" id="reset">Reset</button>
-
           <p id="player-one-wins">Player One: <span class="win-count">0</span></p>
           <p id="player-two-wins">Player Two: <span class="win-count">0</span></p>
-
         </section>
 
         <section id="game">
-
           <table>
               <tr>
               <!-- The up-slope and down-slope classes select the cells along the two diagonals -->
@@ -67,16 +50,10 @@
                 <td class="bottom left up-slope"></td>
                 <td class="bottom center"></td>
                 <td class="bottom right down-slope"></td>
-
               </tr>
-              
             </table>
-
         </section>
       </main>
-
     </div>
-
   </body>
-
 </html>
