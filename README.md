@@ -2,6 +2,7 @@
 A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
 Hosted GitHub Site: https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/public/ 
+
 Hosted Firebase Site: https://pams-tic-tac-toe.firebaseapp.com/
 
 ## Outstanding issues
