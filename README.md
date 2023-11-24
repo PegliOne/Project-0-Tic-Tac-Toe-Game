@@ -1,7 +1,8 @@
 # Project-0-Tic-Tac-Toe-Game
 A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
-Play the game [here](https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/public/) and [here](https://pams-tic-tac-toe.firebaseapp.com/).
+Hosted GitHub Site: https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/public/ 
+Hosted Firebase Site: https://pams-tic-tac-toe.firebaseapp.com/
 
 ## Outstanding issues
 
