@@ -1,15 +1,12 @@
 # Project-0-Tic-Tac-Toe-Game
-A tic-tac-toe game made for the first project of the GA Software Engineering Course
 
 Hosted GitHub Site: https://peglione.github.io/Project-0-Tic-Tac-Toe-Game/public/ 
 
 Hosted Firebase Site: https://pams-tic-tac-toe.firebaseapp.com/
 
-## Outstanding issues
+## Summary
 
-* Game-info text does not transition gradually
-* Game can't distinguish different users, so the same computer can be used to play multiple moves. Please play honestly!
-* Both players need to hit restart once the game is won. One player's restart won't automatically apply to the other
+A tic-tac-toe game made using HTML5, CSS, JavaScript and Firebase data storage. Features include score tracking and the ability to select player markers.
 
 ## Technologies Used
 * HTML, CSS and JavaScript
@@ -19,6 +16,12 @@ Hosted Firebase Site: https://pams-tic-tac-toe.firebaseapp.com/
 ## Sites Used For Styling
 * [Coolers](https://coolors.co/palettes/popular)
 * [Google fonts](https://fonts.google.com/specimen/Open+Sans?preview.text=XOXOXOX&preview.text_type=custom&sidebar.open=true&selection.family=Open+Sans:wght@400;700)
+
+## Outstanding issues
+
+* Game-info text does not transition gradually
+* Game can't distinguish different users, so the same computer can be used to play multiple moves. Please play honestly!
+* Both players need to hit restart once the game is won. One player's restart won't automatically apply to the other
 
 ## Game Production Updates
 
